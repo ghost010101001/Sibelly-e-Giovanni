@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💗 Sibelly e Giovanni 💗</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      background: #f8bbd0;
+      color: #880e4f;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #880e4f;
+    }
+
+    p {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .contador {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 700px;
+      width: 90%;
+      margin-bottom: 50px;
+    }
+
+    .bloco {
+      background: #f7a2c0;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 12px #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .numero {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .legenda {
+      font-size: 16px;
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    .cora {
+      position: absolute;
+      font-size: 20px;
+      animation: flutuar 3s infinite ease-in-out;
+      color: #eb1580;
+    }
+
+    @keyframes flutuar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    header img {
+      max-width: 300px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sibelly e Giovanni</h1>
+
+  <p>Amor, eu sei que esse site tá uma merda porque sou péssimo nisso… mas fazer o quê, né?</p>
+
+  <p>Eu queria poder te agradecer pessoalmente, mas sei que isso vai demorar um pouco, então vou te agradecer por aqui mesmo. Amor, desde o dia em que começamos a namorar, minha vida mudou completamente.</p>
+
+  <p>Eu ganhei um novo propósito de vida: te mimar até você falar “chega” kkkk.</p>
+
+  <p>Brincadeiras à parte, eu queria dizer que você veio pra minha vida e trouxe com você uma felicidade que eu não sentia fazia tempo.</p>
+
+  <p>Eu posso até fazer coisas que te deixem com raiva ou triste às vezes, mas eu juro que não é minha intenção — eu faço sem perceber. Me desculpa por isso.</p>
+
+  <p>Eu quero que você saiba que eu te amo infinitamente, e quero — e vou — viver uma vida ao seu lado, te tratando como uma princesa e te enchendo de carinho e amor. Porque é isso que você merece.</p>
+
+  <h1>💗 Tempo Juntos 💗</h1>
+
+
+<div class="contador">
+  <div class="bloco">
+    <div class="numero" id="anos">0</div>
+    <div class="legenda">anos</div>
+  </div>
+  <div class="bloco">
+    <div class="numero" id="meses">0</div>
+    <div class="legenda">meses</div>
+  </div>
+  <div class="bloco">
+    <div class="numero" id="dias">0</div>
+    <div class="legenda">dias</div>
+  </div>
+  <div class="bloco">
+    <div class="numero" id="horas">0</div>
+    <div class="legenda">horas</div>
+  </div>
+  <div class="bloco">
+    <div class="numero" id="minutos">0</div>
+    <div class="legenda">minutos</div>
+  </div>
+  <div class="bloco">
+    <div class="numero" id="segundos">0</div>
+    <div class="legenda">segundos</div>
+  </div>
+</div>
+
+
+
+<script>
+  const dataInicio = new Date(2025, 0, 20, 22, 52, 0); // 21 de janeiro de 2025 às 22:36:00
+
+  function atualizarContador() {
+    const agora = new Date();
+    let diff = Math.abs(agora - dataInicio);
+
+    const segundosTotais = Math.floor(diff / 1000);
+
+    const anos = Math.floor(segundosTotais / (365.25 * 24 * 3600));
+    const meses = Math.floor((segundosTotais % (365.25 * 24 * 3600)) / (30.44 * 24 * 3600));
+    const dias = Math.floor((segundosTotais % (30.44 * 24 * 3600)) / (24 * 3600));
+    const horas = Math.floor((segundosTotais % (24 * 3600)) / 3600);
+    const minutos = Math.floor((segundosTotais % 3600) / 60);
+    const segundos = segundosTotais % 60;
+
+    document.getElementById("anos").textContent = anos;
+    document.getElementById("meses").textContent = meses;
+    document.getElementById("dias").textContent = dias;
+    document.getElementById("horas").textContent = horas;
+    document.getElementById("minutos").textContent = minutos;
+    document.getElementById("segundos").textContent = segundos;
+  }
+
+  atualizarContador();
+  setInterval(atualizarContador, 1000);
+
+
+
+
+  </script>
+  <h1>Eu te amo</h1>
+
+<header>
+  <img src="50e7be52-3f1a-45e9-aec2-0149134a371a.png" alt="Foto de Sibelly e Giovanni" />
+</header>
+
+  <div style="max-width: 500px; text-align: left; margin-bottom: 50px;">
+    <p><strong>Português:</strong> Eu te amo 💗</p>
+    <p><strong>Inglês:</strong> I love you 💗</p>
+    <p><strong>Espanhol:</strong> Te amo 💗</p>
+    <p><strong>Francês:</strong> Je t’aime 💗</p>
+    <p><strong>Italiano:</strong> Ti amo 💗</p>
+    <p><strong>Alemão:</strong> Ich liebe dich 💗</p>
+    <p><strong>Russo:</strong> Я тебя люблю 💗</p>
+    <p><strong>Japonês:</strong> 愛してる 💗</p>
+    <p><strong>Coreano:</strong> 사랑해 💗</p>
+    <p><strong>Chinês:</strong> 我爱你 💗</p>
+    <p><strong>Hindi:</strong> मैं तुमसे प्यार करता हूँ 💗</p>
+    <p><strong>Grego:</strong> Σ’ αγαπώ 💗</p>
+    <p><strong>Turco:</strong> Seni seviyorum 💗</p>
+    <p><strong>Sueco:</strong> Jag älskar dig 💗</p>
+    <p><strong>Polonês:</strong> Kocham cię 💗</p>
+    <p><strong>Holandês:</strong> Ik hou van jou 💗</p>
+    <p><strong>Hebraico:</strong> אני אוהב אותך 💗</p>
+    <p><strong>Esperanto:</strong> Mi amas vin 💗</p>
+    <p><strong>Tailandês:</strong> ฉันรักคุณ 💗</p>
+    <p><strong>Árabe:</strong> أحبك 💗</p>
+    <p><strong>Filipino (Tagalog):</strong> Mahal kita 💗</p>
+    <p><strong>Romeno:</strong> Te iubesc 💗</p>
+    <p><strong>Vietnamita:</strong> Anh yêu em / Em yêu anh 💗</p>
+    <p><strong>Indonésio:</strong> Aku cinta kamu 💗</p>
+    <p><strong>Tcheco:</strong> Miluji tě 💗</p>
+    <p><strong>Húngaro:</strong> Szeretlek 💗</p>
+    <p><strong>Ucraniano:</strong> Я тебе кохаю 💗</p>
+    <p><strong>Finlandês:</strong> Rakastan sinua 💗</p>
+  </div>
+
+</body>
+</html>
